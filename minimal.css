@@ -1,0 +1,80 @@
+/* 전역 미니멀 톤앤매너 설정 */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* 메인 컨테이너 배치 */
+.products-grid-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 75vh;
+    padding: 0 5%;
+    box-sizing: border-box;
+}
+
+/* 개별 카테고리가 차지하는 독립된 사각형 영역 박스 */
+.product-box {
+    position: relative;
+    width: 300px;
+    /* 기획안의 상세 그래픽이 다 담길 수 있는 독립 영역 크기 */
+    height: 300px;
+    /* 고정 크기 혹은 비율로 설정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 이미지가 토글되는 영역 (박스 내부에 제한) */
+.display-area {
+    position: relative;
+    width: 100%;
+    height: 85%;
+    overflow: visible;
+    /* 상세 와이어프레임 오브젝트가 자체 박스 안에서 정돈되도록 함 */
+    cursor: pointer;
+}
+
+/* 기본 상태 이미지와 호버 상태 이미지 겹치기 */
+.display-area img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* 와이어프레임 비율 유지 */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 초기 상태 스위칭 */
+.img-default {
+    opacity: 1;
+    z-index: 1;
+}
+
+.img-hover {
+    opacity: 0;
+    z-index: 2;
+}
+
+/* 마우스 호버 시: 해당 독립 영역 안에서만 변화 발생 */
+.product-box:hover .img-default {
+    opacity: 0;
+}
+
+.product-box:hover .img-hover {
+    opacity: 1;
+}
+
+/* 텍스트 라벨 스타일 정의 */
+.label {
+    font-size: 13px;
+    text-align: left;
+    margin-top: 10px;
+    text-transform: lowercase;
+}

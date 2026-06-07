@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="da:bt - no doubt. 감각적인 미니멀리즘과 자연의 순수함을 담은 브랜드.">
+  <title>da:bt — HOME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home-page">
+
+  <!-- Header Navigation -->
+  <header class="products-header">
+    <nav class="products-nav">
+      <a href="#hero" class="nav-item active">HOME</a>
+      <a href="#story" class="nav-item">STORY</a>
+      <a href="products.html" class="nav-item">PRODUCTS</a>
+      <a href="#" class="nav-item">CONTENTS</a>
+      <a href="#" class="nav-item">ABOUT</a>
+    </nav>
+  </header>
+
+  <!-- Main Home Layout -->
+  <main class="home-main">
+    
+    <!-- Hero Section -->
+    <section id="hero" class="home-hero">
+      <div class="motion-graphic-box" id="motion-box">
+        <img src="assets/home_gif/dabt_logo_motion.gif" alt="da:bt logo motion" class="motion-gif">
+      </div>
+      
+      <div class="home-intro">
+        <h2 class="intro-title" id="intro-title">dabt, no doubt.</h2>
+        <div class="intro-description" id="intro-desc">
+          <p>사과는 겉은 붉지만 속은 하얗고, 토마토는 겉도 속도 붉습니다.</p>
+          <p>DABT는 '사과가 되지 말고, 도마도가 되어라'라는 속담에서 출발해, 겉과 속이 같은 진정한 소비를 제안합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="home-story-section">
+      <div class="story-container">
+        <span class="story-tag-light">story</span>
+        <h3 class="story-title-light">dabt, the essence of clarity</h3>
+        <p class="story-desc-light">
+          da:bt는 불필요한 모든 것을 덜어내고 본질만을 남깁니다.<br>
+          자연에서 얻은 순수한 원재료를 통해 정직한 맛과 미니멀한 감성을 전달하고자 합니다.<br>
+          우리는 타협하지 않는 퀄리티로 일상의 매 순간에 명확한 기준(no doubt)을 제시합니다.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="products-footer">
+    © 2026 dabt. all rights reserved.
+  </footer>
+
+  <!-- Interactive Smooth Scroll & Nav Highlight Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('.products-nav a[href^="#"]');
+      
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const targetId = link.getAttribute('href');
+          if (targetId === '#') return;
+          
+          e.preventDefault();
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 40, // offset to account for navbar header padding
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Intersection Observer for highlighting navigation
+      const sections = document.querySelectorAll('section[id]');
+      const navItems = {
+        'hero': document.querySelector('.products-nav a[href="#hero"]'),
+        'story': document.querySelector('.products-nav a[href="#story"]')
+      };
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '-30% 0px -40% 0px', // Trigger when section is in the middle of viewport
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            // Clear all active classes
+            Object.values(navItems).forEach(item => {
+              if (item) item.classList.remove('active');
+            });
+            // Mark correct item as active
+            if (navItems[id]) {
+              navItems[id].classList.add('active');
+            }
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => {
+        if (section.id && navItems[section.id]) {
+          observer.observe(section);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
