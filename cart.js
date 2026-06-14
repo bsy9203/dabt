@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cartItemsList = document.querySelector('.cart-items-list');
   const cartEmptyState = document.querySelector('.cart-empty-state');
   const cartPageContent = document.querySelector('.cart-page-content');
-  
+
   // Dynamic header nav link handling
   injectCartNavButton();
   const cartToggleBtns = document.querySelectorAll('.cart-toggle-btn');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 4. Bind Global Event Listeners
-  
+
   // Close buttons & Backdrop clicks (if drawers exist)
   document.querySelectorAll('.drawer-close-btn').forEach(btn => {
     btn.addEventListener('click', closeAllDrawers);
@@ -53,9 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const price = parseInt(cell.getAttribute('data-price'), 10);
       const img = cell.getAttribute('data-img');
       const desc = cell.getAttribute('data-desc') || '';
-      
+
       currentProduct = { id, name, price, img, desc, quantity: 1 };
-      
+
       openPdpDrawer(currentProduct);
     });
   });
@@ -264,15 +264,15 @@ document.addEventListener('DOMContentLoaded', () => {
     pdpDrawer.querySelector('.pdp-title').textContent = prod.name;
     pdpDrawer.querySelector('.pdp-price').textContent = formatPrice(prod.price);
     pdpDrawer.querySelector('.pdp-desc').textContent = prod.desc;
-    
+
     // reset pdp qty counters
     pdpDrawer.querySelector('.qty-value').textContent = prod.quantity;
     pdpDrawer.querySelector('.total-price-value').textContent = formatPrice(prod.price * prod.quantity);
-    
+
     closeCartDrawer();
     backdrop.classList.add('open');
     pdpDrawer.classList.add('open');
-    document.body.style.overflow = 'hidden'; 
+    document.body.style.overflow = 'hidden';
   }
 
   function closePdpDrawer() {
@@ -342,13 +342,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderCartItems() {
     if (!cartItemsList) return;
     cartItemsList.innerHTML = '';
-    
+
     if (cart.length === 0) {
       cartEmptyState.style.display = 'block';
       cartDrawer.querySelector('.cart-footer').style.display = 'none';
       return;
     }
-    
+
     cartEmptyState.style.display = 'none';
     cartDrawer.querySelector('.cart-footer').style.display = 'block';
 
@@ -434,16 +434,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let subTotal = 0;
-    
+
     // Create elements
     const wrapper = document.createElement('div');
     wrapper.className = 'cart-page-table-wrapper';
-    
+
     let itemsHTML = '';
     cart.forEach((item, index) => {
       const rowTotal = item.price * item.quantity;
       subTotal += rowTotal;
-      
+
       itemsHTML += `
         <div class="cart-page-item-row">
           <div class="cart-page-item-info">
@@ -545,7 +545,7 @@ document.addEventListener('DOMContentLoaded', () => {
       showCustomModal('장바구니가 비어 있습니다.', false);
       return;
     }
-    
+
     showCustomModal('주문이 완료되었습니다! da:bt를 선택해주셔서 감사합니다.', true, () => {
       cart = [];
       saveCart();
