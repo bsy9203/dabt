@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="da:bt products - shopping cart page.">
+  <title>da:bt — (4) cart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sales.css">
+</head>
+<body class="sales-page-body">
+
+  <header class="products-header">
+    <nav class="products-nav">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/dabt_logo_b.png" alt="da:bt" class="nav-logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#hero" class="nav-item">HOME</a>
+        <a href="index.html#split-story-section" class="nav-item">STORY</a>
+        <a href="index.html#ingredients-grid-section" class="nav-item">INGREDIENTS</a>
+        <a href="products.html" class="nav-item">PRODUCTS</a>
+        <a href="cart.html" class="nav-item active">CART</a>
+        <a href="about.html" class="nav-item">ABOUT</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="sales-main">
+    
+    <section class="sales-sidebar">
+      <div class="brand-intro-box">
+        <h1 class="category-title">(4) cart</h1>
+        <p class="category-desc">da:bt에서 선택하신 순수하고 정직한 상품 내역입니다.</p>
+        <hr class="mid-line">
+        <p class="category-desc-secondary">수량 및 최종 결제 금액을 확인하신 후, 하단의 주문 완료 단계를 진행해 주세요.</p>
+      </div>
+    </section>
+
+    <section class="sales-grid-container">
+      <div class="sales-grid-scroll-area">
+        <!-- Cart Page Content Container (Dynamically rendered by cart.js) -->
+        <div class="cart-page-content">
+          <!-- Dynamic contents will be injected here by cart.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="products-footer">
+    © 2026 dabt. all rights reserved.
+  </footer>
+
+  <script src="cart.js" defer></script>
+
+</body>
+</html>

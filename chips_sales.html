@@ -17,11 +17,17 @@
 
   <header class="products-header">
     <nav class="products-nav">
-      <a href="index.html#hero" class="nav-item">HOME</a>
-      <a href="index.html#story" class="nav-item">STORY</a>
-      <a href="products.html" class="nav-item active">PRODUCTS</a>
-      <a href="#" class="nav-item">CONTENTS</a>
-      <a href="#" class="nav-item">ABOUT</a>
+      <a href="index.html" class="nav-logo">
+        <img src="assets/dabt_logo_b.png" alt="da:bt" class="nav-logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#hero" class="nav-item">HOME</a>
+        <a href="index.html#split-story-section" class="nav-item">STORY</a>
+        <a href="index.html#ingredients-grid-section" class="nav-item">INGREDIENTS</a>
+        <a href="products.html" class="nav-item active">PRODUCTS</a>
+        <a href="cart.html" class="nav-item">CART</a>
+        <a href="about.html" class="nav-item">ABOUT</a>
+      </div>
     </nav>
   </header>
 
@@ -42,7 +48,12 @@
         <div class="sales-matrix">
           
           <!-- Row 1 -->
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-01"
+               data-name="CHIPS ITEM 01"
+               data-price="8000"
+               data-img="assets/chips/DSCF5863.JPG"
+               data-desc="저온 진공 공법으로 튀겨내어 원재료 특유의 바삭하고 고소한 맛을 살린 웰빙 칩스입니다. 화학 첨가물이 전혀 없습니다.">
             <div class="prod-wrap">
               <img src="assets/chips/DSCF5863.JPG" alt="Chips Item 01" class="prod-img">
               <div class="prod-info">
@@ -57,7 +68,12 @@
             </div>
           </div>
           
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-02"
+               data-name="CHIPS ITEM 02"
+               data-price="9500"
+               data-img="assets/chips/DSCF5880.JPG"
+               data-desc="달콤한 자색 고구마의 풍부한 맛과 영양을 칩으로 고스란히 담아냈습니다. 자녀 간식이나 가벼운 맥주 안주로 추천합니다.">
             <div class="prod-wrap">
               <img src="assets/chips/DSCF5880.JPG" alt="Chips Item 02" class="prod-img">
               <div class="prod-info">
@@ -72,7 +88,12 @@
           <!-- Row 2 -->
           <div class="matrix-cell"></div>
           
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-03"
+               data-name="CHIPS ITEM 03"
+               data-price="8500"
+               data-img="assets/chips/DSCF5883.JPG"
+               data-desc="엄선된 생감자를 그대로 얇게 슬라이스하여 바삭한 맛과 짭짤하고 담백한 풍미를 선사하는 감자칩입니다.">
             <div class="prod-wrap">
               <img src="assets/chips/DSCF5883.JPG" alt="Chips Item 03" class="prod-img">
               <div class="prod-info">
@@ -87,7 +108,12 @@
             </div>
           </div>
           
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-04"
+               data-name="CHIPS ITEM 04"
+               data-price="9000"
+               data-img="assets/chips/DSCF5889.JPG"
+               data-desc="유기농 단호박의 부드러운 단맛과 비타민 A 영양소를 가득 안은 고소하고 건강한 영양 만점 칩스 제품입니다.">
             <div class="prod-wrap">
               <img src="assets/chips/DSCF5889.JPG" alt="Chips Item 04" class="prod-img">
               <div class="prod-info">
@@ -98,7 +124,12 @@
           </div>
           
           <!-- Row 3 -->
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-05"
+               data-name="CHIPS ITEM 05"
+               data-price="10000"
+               data-img="assets/chips/DSCF5898.JPG"
+               data-desc="뮤신이 가득한 연근을 가볍고 담백한 진공 칩으로 가공하여, 위장에 무리가 가지 않는 바삭하고 영양 가득한 전통 스낵입니다.">
             <div class="prod-wrap">
               <img src="assets/chips/DSCF5898.JPG" alt="Chips Item 05" class="prod-img">
               <div class="prod-info">
@@ -118,7 +149,12 @@
           <div class="matrix-cell"></div>
           
           <!-- Row 4 -->
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-06"
+               data-name="CHIPS ITEM 06"
+               data-price="9000"
+               data-img="assets/chips/DSCF5913.JPG"
+               data-desc="신선한 국산 당근을 바삭하고 칩 형태로 가공해 눈 건강을 지키는 비타민 A 영양소를 간편하고 맛있게 섭취할 수 있도록 돕습니다.">
             <div class="prod-wrap">
               <img src="assets/chips/DSCF5913.JPG" alt="Chips Item 06" class="prod-img">
               <div class="prod-info">
@@ -128,7 +164,12 @@
             </div>
           </div>
           
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-07"
+               data-name="CHIPS ITEM 07"
+               data-price="8500"
+               data-img="assets/chips/DSCF5921.JPG"
+               data-desc="아삭한 생우엉의 건강한 풍미와 다량의 이눌린 성분을 담아내어, 디톡스 효과와 바삭한 식감을 극대화한 이색 영양 칩스입니다.">
             <div class="prod-wrap">
               <img src="assets/chips/DSCF5921.JPG" alt="Chips Item 07" class="prod-img">
               <div class="prod-info">
@@ -143,7 +184,12 @@
             </div>
           </div>
           
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-08"
+               data-name="CHIPS ITEM 08"
+               data-price="9500"
+               data-img="assets/chips/DSCF5935.JPG"
+               data-desc="달콤하고 은은한 향을 가진 유기농 바나나를 가공한 스낵으로, 남녀노소 누구나 바삭하고 즐겁게 에너지를 충전할 수 있습니다.">
             <div class="prod-wrap">
               <img src="assets/chips/DSCF5935.JPG" alt="Chips Item 08" class="prod-img">
               <div class="prod-info">
@@ -162,7 +208,12 @@
             </div>
           </div>
           
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-09"
+               data-name="CHIPS ITEM 09"
+               data-price="10500"
+               data-img="assets/chips/DSCF5944.JPG"
+               data-desc="칼륨과 영양이 농축된 신선한 비트를 저온 진공 건조하여, 붉은 영양 성분과 고유의 깊은 단맛을 살려낸 고품격 비트칩입니다.">
             <div class="prod-wrap">
               <img src="assets/chips/DSCF5944.JPG" alt="Chips Item 09" class="prod-img">
               <div class="prod-info">
@@ -172,7 +223,12 @@
             </div>
           </div>
           
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-10"
+               data-name="CHIPS ITEM 10"
+               data-price="11000"
+               data-img="assets/chips/DSCF5956.JPG"
+               data-desc="유기농 사과를 슬라이스하여 펙틴과 과일산 등 이로운 영양소를 살린 새콤달콤하고 바삭함이 돋보이는 웰빙 과일 스낵입니다.">
             <div class="prod-wrap">
               <img src="assets/chips/DSCF5956.JPG" alt="Chips Item 10" class="prod-img">
               <div class="prod-info">
@@ -183,7 +239,12 @@
           </div>
           
           <!-- Row 6 -->
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-11"
+               data-name="CHIPS ITEM 11"
+               data-price="12000"
+               data-img="assets/chips/2.JPG"
+               data-desc="자연 유기농 베리믹스를 진공 동결하여 칩 형태로 만든 고품격 항산화 제품으로, 새콤함과 신선함이 입안 가득 감돕니다.">
             <div class="prod-wrap">
               <img src="assets/chips/2.JPG" alt="Chips Item 11" class="prod-img">
               <div class="prod-info">
@@ -201,7 +262,12 @@
             </div>
           </div>
           
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="chips-12"
+               data-name="CHIPS ITEM 12"
+               data-price="9500"
+               data-img="assets/chips/DSCF5957.JPG"
+               data-desc="섬유질이 농축된 건강 유기농 야채들을 한데 모은 종합 야채칩으로, 자연 그대로의 다채로운 식감과 영양을 동시에 맛볼 수 있습니다.">
             <div class="prod-wrap">
               <img src="assets/chips/DSCF5957.JPG" alt="Chips Item 12" class="prod-img">
               <div class="prod-info">
@@ -220,6 +286,8 @@
   <footer class="products-footer">
     © 2026 dabt. all rights reserved.
   </footer>
+
+  <script src="cart.js" defer></script>
 
 </body>
 </html>

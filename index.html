@@ -19,42 +19,219 @@
   <!-- Header Navigation -->
   <header class="products-header">
     <nav class="products-nav">
-      <a href="#hero" class="nav-item active">HOME</a>
-      <a href="#story" class="nav-item">STORY</a>
-      <a href="products.html" class="nav-item">PRODUCTS</a>
-      <a href="#" class="nav-item">CONTENTS</a>
-      <a href="#" class="nav-item">ABOUT</a>
+      <a href="index.html" class="nav-logo">
+        <img src="assets/dabt_logo_b.png" alt="da:bt" class="nav-logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="#hero" class="nav-item active">HOME</a>
+        <a href="#split-story-section" class="nav-item">STORY</a>
+        <a href="#ingredients-grid-section" class="nav-item">INGREDIENTS</a>
+        <a href="products.html" class="nav-item">PRODUCTS</a>
+        <a href="cart.html" class="nav-item">CART</a>
+        <a href="about.html" class="nav-item">ABOUT</a>
+      </div>
     </nav>
   </header>
 
   <!-- Main Home Layout -->
   <main class="home-main">
     
-    <!-- Hero Section -->
+    <!-- Hero Section (Sequential Cross-Fade Frames) -->
     <section id="hero" class="home-hero">
       <div class="motion-graphic-box" id="motion-box">
-        <img src="assets/home_gif/dabt_logo_motion.gif" alt="da:bt logo motion" class="motion-gif">
+        <img src="assets/home_gif/motion_1.jpg" alt="da:bt logo motion 1" class="motion-frame active">
+        <img src="assets/home_gif/motion_2.jpg" alt="da:bt logo motion 2" class="motion-frame">
+        <img src="assets/home_gif/motion_3.jpg" alt="da:bt logo motion 3" class="motion-frame">
+        <img src="assets/home_gif/motion_4.jpg" alt="da:bt logo motion 4" class="motion-frame">
+        <img src="assets/home_gif/motion_5.jpg" alt="da:bt logo motion 5" class="motion-frame">
+        <img src="assets/home_gif/motion_6.jpg" alt="da:bt logo motion 6" class="motion-frame">
+        <img src="assets/home_gif/motion_7.jpg" alt="da:bt logo motion 7" class="motion-frame">
+        <img src="assets/home_gif/motion_8.jpg" alt="da:bt logo motion 8" class="motion-frame">
+        <img src="assets/home_gif/motion_9.jpg" alt="da:bt logo motion 9" class="motion-frame">
       </div>
-      
-      <div class="home-intro">
-        <h2 class="intro-title" id="intro-title">dabt, no doubt.</h2>
-        <div class="intro-description" id="intro-desc">
-          <p>사과는 겉은 붉지만 속은 하얗고, 토마토는 겉도 속도 붉습니다.</p>
-          <p>DABT는 '사과가 되지 말고, 도마도가 되어라'라는 속담에서 출발해, 겉과 속이 같은 진정한 소비를 제안합니다.</p>
+    </section>
+
+    <!-- Interactive Storytelling Section (Side-by-Side Apple vs Tomato) -->
+    <section id="split-story-section" class="home-split-section">
+      <div class="story-scroll-track" style="--scroll-progress: 0;">
+        <div class="sticky-viewport">
+          
+          <!-- Left Side: Apple (Spiral Peeling) -->
+          <div class="split-side apple-side">
+            <div class="story-content-box">
+              <span class="story-tag-light">the apple</span>
+              <h3 class="story-title-light">사과는 겉은 붉지만<br>속은 하얗습니다.</h3>
+              <p class="story-desc-light">
+                세상이 말하는 기준에 맞추어 포장하기 위해,<br>
+                정작 중요한 본질은 흐려진 채 겉모습만 꾸미고 있지는 않나요?
+              </p>
+            </div>
+            <div class="graphic-stage">
+              <div class="graphic-wrapper apple-wrapper">
+                <!-- Inner real fruit core -->
+                <img src="assets/graphic/apple_real_half.png" alt="Apple Inside" class="graphic-image img-i">
+                
+                <!-- Outer skin that fades out -->
+                <img src="assets/graphic/apple_real_full.png" alt="Apple Outside" class="graphic-image img-o-base">
+              </div>
+            </div>
+          </div>
+
+          <!-- Center: Colon Divider (The truth exposure key) -->
+          <div class="colon-divider-container">
+            <div class="divider-line"></div>
+            <div class="brand-colon-trigger">
+              <span class="colon-dot"></span>
+              <span class="colon-dot"></span>
+            </div>
+            <div class="divider-line"></div>
+          </div>
+
+          <!-- Right Side: Tomato (Blanched Petal Peeling) -->
+          <div class="split-side tomato-side">
+            <div class="story-content-box">
+              <span class="story-tag-light">the tomato</span>
+              <h3 class="story-title-light">토마토는 겉도 속도<br>모두 붉습니다.</h3>
+              <p class="story-desc-light">
+                da:bt는 겉과 속이 완전히 일치하는 투명함을 지향합니다.<br>
+                불필요한 포장과 첨가물을 걷어내고 원재료의 정직함을 가득 채웁니다.
+              </p>
+            </div>
+            <div class="graphic-stage">
+              <div class="graphic-wrapper tomato-wrapper">
+                <!-- Inner real fruit core -->
+                <img src="assets/graphic/tomato_real_half.png" alt="Tomato Inside" class="graphic-image img-i">
+                
+                <!-- Outer skin that fades out -->
+                <img src="assets/graphic/tomato_real_full.png" alt="Tomato Outside" class="graphic-image img-o-base">
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Story Section -->
-    <section id="story" class="home-story-section">
-      <div class="story-container">
-        <span class="story-tag-light">story</span>
-        <h3 class="story-title-light">dabt, the essence of clarity</h3>
-        <p class="story-desc-light">
-          da:bt는 불필요한 모든 것을 덜어내고 본질만을 남깁니다.<br>
-          자연에서 얻은 순수한 원재료를 통해 정직한 맛과 미니멀한 감성을 전달하고자 합니다.<br>
-          우리는 타협하지 않는 퀄리티로 일상의 매 순간에 명확한 기준(no doubt)을 제시합니다.
-        </p>
+    <!-- Ingredients Swipable Carousel Section -->
+    <section id="ingredients-grid-section" class="home-ingredients-section">
+      <div class="ingredients-header">
+        <span class="story-tag-light">ingredients</span>
+        <h3 class="story-title-light">no doubt, pure honesty</h3>
+        <p class="story-desc-light">da:bt의 약속을 완성하는 12가지 원재료의 안과 밖을 돌려가며 탐색해보세요.</p>
+      </div>
+
+      <!-- Carousel Container (Circular Wheel Dial style) -->
+      <div class="ingredients-carousel-container">
+        
+        <div class="carousel-viewport" id="carousel-viewport">
+          <div class="carousel-track" id="carousel-track">
+            
+            <!-- Apple (Vector Graphic) -->
+            <div class="carousel-item" data-index="0" data-en="Apple" data-ko="사과" data-desc="식이섬유인 펙틴과 유기산이 풍부하게 함유되어 있어 장내 유익균을 활성화하고 체내 노폐물 배출을 촉진합니다. 특히 다량의 사과산은 젖산을 분해하여 지친 현대인에게 깊은 활력과 피로 회복 효과를 선사합니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/apple_i.png" alt="Apple Inner" class="img-inner">
+                <img src="assets/graphic/apple_o.png" alt="Apple Outer" class="img-outer">
+              </div>
+            </div>
+
+            <!-- Tomato (Vector Graphic) -->
+            <div class="carousel-item" data-index="1" data-en="Tomato" data-ko="토마토" data-desc="강력한 항산화 물질인 라이코펜과 베타카로틴이 세포의 산화를 막아 혈관 건강을 개선하고 피부 노화를 효과적으로 예방합니다. 붉은 과육 속에 함유된 유기산은 소화를 돕고 피로 물질을 정화하는 데 기여합니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/tomato_i.png" alt="Tomato Inner" class="img-inner">
+                <img src="assets/graphic/tomato_o.png" alt="Tomato Outer" class="img-outer">
+              </div>
+            </div>
+
+            <!-- Banana -->
+            <div class="carousel-item" data-index="2" data-en="Banana" data-ko="바나나" data-desc="체내 나트륨 배출을 돕는 칼륨과 신경 안정에 기여하는 마그네슘이 다량 들어 있어 혈압 조절과 근육 기능 유지에 탁월합니다. 빠르게 흡수되는 과당과 포도당이 즉각적인 에너지를 공급해 활력을 빠르게 충전합니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/banana_i.png" alt="Banana Inner" class="img-inner">
+                <img src="assets/graphic/banana_o.png" alt="Banana Outer" class="img-outer">
+              </div>
+            </div>
+
+            <!-- Blueberry -->
+            <div class="carousel-item" data-index="3" data-en="Blueberry" data-ko="블루베리" data-desc="안토시아닌과 폴리페놀 성분이 망막의 로돕신 재합성을 촉진하여 시력을 보호하고 안구 건조증을 완화하는 데 탁월한 효과가 있습니다. 강력한 뇌 세포 활성화 기능으로 기억력 개선 및 염증 억제에 도움을 줍니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/blueberry_i.png" alt="Blueberry Inner" class="img-inner">
+                <img src="assets/graphic/blueberry_o.png" alt="Blueberry Outer" class="img-outer">
+              </div>
+            </div>
+
+            <!-- Grape -->
+            <div class="carousel-item" data-index="4" data-en="Grape" data-ko="포도" data-desc="포도씨와 껍질에 가득한 레스베라트롤이 나쁜 콜레스테롤의 축적을 막고 혈액 순환을 개선하여 혈관 및 심혈관 건강을 탄탄하게 지켜줍니다. 풍부하게 든 구연산과 비타민은 신진대사를 촉진하여 면역력을 높입니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/grape_i.png" alt="Grape Inner" class="img-inner">
+                <img src="assets/graphic/grape_o.png" alt="Grape Outer" class="img-outer">
+              </div>
+            </div>
+
+            <!-- Kiwi -->
+            <div class="carousel-item" data-index="5" data-en="Kiwi" data-ko="키위" data-desc="오렌지의 수 배에 달하는 비타민 C와 비타민 E가 멜라닌 색소 침착을 예방해 맑고 투명한 피부 톤을 지켜주고 면역력을 강화합니다. 천연 단백질 분해 효소인 액티니딘 성분이 위장의 부담을 줄이고 소화를 촉진합니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/kiwi_i.png" alt="Kiwi Inner" class="img-inner">
+                <img src="assets/graphic/kiwi_o.png" alt="Kiwi Outer" class="img-outer">
+              </div>
+            </div>
+
+            <!-- Mandarin -->
+            <div class="carousel-item" data-index="6" data-en="Mandarin" data-ko="귤" data-desc="천연 감기약이라 불릴 정도로 구연산과 비타민 C가 농축되어 있어 겨울철 면역 세포를 활성화하고 추위에 대한 저항력을 높여줍니다. 모세혈관을 강화하는 펠라비트 성분이 혈액 순환과 독소 해독을 돕습니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/mandarin_i.png" alt="Mandarin Inner" class="img-inner">
+                <img src="assets/graphic/mandarin_o.png" alt="Mandarin Outer" class="img-outer">
+              </div>
+            </div>
+
+            <!-- Pumpkin -->
+            <div class="carousel-item" data-index="7" data-en="Pumpkin" data-ko="단호박" data-desc="풍부한 비타민 A와 베타카로틴 성분이 점막 세포를 튼튼하게 만들어 호흡기 면역력을 높이고 이뇨 작용을 도와 체내 붓기 제거에 탁월합니다. 탄수화물과 섬유질의 황금비율로 장운동을 돕고 부드럽게 속을 보듬습니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/pumpkin_i.png" alt="Pumpkin Inner" class="img-inner">
+                <img src="assets/graphic/pumpkin_o.png" alt="Pumpkin Outer" class="img-outer">
+              </div>
+            </div>
+
+            <!-- Sweet Potato -->
+            <div class="carousel-item" data-index="8" data-en="Sweet Potato" data-ko="고구마" data-desc="혈당 지수가 낮고 풍부한 식이섬유가 위장에서 천천히 소화되어 급격한 인슐린 분비를 막고 오랫동안 든든한 포만감을 유지해 줍니다. 껍질 속 안토시아닌이 활성산소를 억제해 대장 건강과 성인병 예방을 돕습니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/s.p_i.png" alt="Sweet Potato Inner" class="img-inner">
+                <img src="assets/graphic/s.p_o.png" alt="Sweet Potato Outer" class="img-outer">
+              </div>
+            </div>
+
+            <!-- Strawberry (Uses inner fallback for both) -->
+            <div class="carousel-item" data-index="9" data-en="Strawberry" data-ko="딸기" data-desc="강력한 항산화제인 안토시아닌과 비타민 C가 피부 탄력을 유지하는 콜라겐 합성을 촉진하고 노화 유발 물질인 활성산소를 깨끗하게 소거합니다. 피로 해소와 잇몸 건강, 혈행 개선에 전반적인 도움을 줍니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/strawberry_i.png" alt="Strawberry Inner" class="img-inner">
+                <img src="assets/graphic/strawberry_i.png" alt="Strawberry Outer" class="img-outer">
+              </div>
+            </div>
+
+            <!-- Zucchini (애호박) -->
+            <div class="carousel-item" data-index="10" data-en="Zucchini" data-ko="애호박" data-desc="소화 기관을 자극하지 않고 흡수되는 부드러운 당질과 비타민 A 성분이 들어 있어 위염이나 위궤양 환자의 점막 보호와 소화 개선에 뛰어납니다. 다량의 레시틴 성분이 함유되어 뇌 발달과 기억력 향상에도 긍정적인 영향을 줍니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/애호박_i.png" alt="Zucchini Inner" class="img-inner">
+                <img src="assets/graphic/애호박_o.png" alt="Zucchini Outer" class="img-outer">
+              </div>
+            </div>
+
+            <!-- Lotus Root (연근) -->
+            <div class="carousel-item" data-index="11" data-en="Lotus Root" data-ko="연근" data-desc="끈적이는 뮤신 성분이 위 점막을 감싸 위벽을 탄탄하게 보호하고, 타닌 성분이 강력한 소염 및 지혈 작용을 해 위 건강 개선과 체내 해독을 촉진합니다. 철분과 아미노산이 다량 함유되어 빈혈 예방과 활력 증진에 좋습니다.">
+              <div class="carousel-item-graphic">
+                <img src="assets/graphic/연근_i.png" alt="Lotus Root Inner" class="img-inner">
+                <img src="assets/graphic/연근_o.png" alt="Lotus Root Outer" class="img-outer">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Description for active fruit -->
+      <div class="active-fruit-details">
+        <h4 id="active-title-en">Fruit</h4>
+        <h3 id="active-title-ko">과일</h3>
+        <p id="active-description">스와이프하여 다양한 과일의 효능을 알아보세요.</p>
       </div>
     </section>
 
@@ -65,38 +242,37 @@
     © 2026 dabt. all rights reserved.
   </footer>
 
-  <!-- Interactive Smooth Scroll & Nav Highlight Script -->
+  <!-- Interactive Smooth Scroll, Highlight, and Dial Control Scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Smooth Scroll
       const navLinks = document.querySelectorAll('.products-nav a[href^="#"]');
-      
       navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
           const targetId = link.getAttribute('href');
           if (targetId === '#') return;
-          
           e.preventDefault();
           const targetElement = document.querySelector(targetId);
-          
           if (targetElement) {
             window.scrollTo({
-              top: targetElement.offsetTop - 40, // offset to account for navbar header padding
+              top: targetElement.offsetTop,
               behavior: 'smooth'
             });
           }
         });
       });
 
-      // Intersection Observer for highlighting navigation
+      // Navigation Highlights
       const sections = document.querySelectorAll('section[id]');
       const navItems = {
         'hero': document.querySelector('.products-nav a[href="#hero"]'),
-        'story': document.querySelector('.products-nav a[href="#story"]')
+        'split-story-section': document.querySelector('.products-nav a[href="#split-story-section"]'),
+        'ingredients-grid-section': document.querySelector('.products-nav a[href="#ingredients-grid-section"]')
       };
 
       const observerOptions = {
         root: null,
-        rootMargin: '-30% 0px -40% 0px', // Trigger when section is in the middle of viewport
+        rootMargin: '-30% 0px -40% 0px',
         threshold: 0
       };
 
@@ -104,11 +280,9 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const id = entry.target.getAttribute('id');
-            // Clear all active classes
             Object.values(navItems).forEach(item => {
               if (item) item.classList.remove('active');
             });
-            // Mark correct item as active
             if (navItems[id]) {
               navItems[id].classList.add('active');
             }
@@ -120,6 +294,142 @@
         if (section.id && navItems[section.id]) {
           observer.observe(section);
         }
+      });
+
+      // Scroll Progress for Apple vs Tomato
+      const scrollTrack = document.querySelector('.story-scroll-track');
+      window.addEventListener('scroll', () => {
+        if (scrollTrack) {
+          const rect = scrollTrack.getBoundingClientRect();
+          const viewHeight = window.innerHeight;
+          const totalDistance = rect.height - viewHeight;
+          const scrolled = -rect.top;
+          const progress = Math.min(Math.max(scrolled / totalDistance, 0), 1);
+          scrollTrack.style.setProperty('--scroll-progress', progress);
+        }
+      });
+
+      // Hero Image Sequence Animator (Cross-fade loop)
+      const motionBox = document.getElementById('motion-box');
+      if (motionBox) {
+        const frames = Array.from(motionBox.querySelectorAll('.motion-frame'));
+        let currentFrame = 0;
+        setInterval(() => {
+          frames[currentFrame].classList.remove('active');
+          currentFrame = (currentFrame + 1) % frames.length;
+          frames[currentFrame].classList.add('active');
+        }, 1000); // Cross-fade every 1000ms (1s)
+      }
+
+      // Linear Slider Carousel Logic
+      const viewport = document.getElementById('carousel-viewport');
+      const track = document.getElementById('carousel-track');
+      const items = Array.from(track.querySelectorAll('.carousel-item'));
+      const activeEn = document.getElementById('active-title-en');
+      const activeKo = document.getElementById('active-title-ko');
+      const activeDesc = document.getElementById('active-description');
+
+      let activeIndex = 1; // Default to Tomato
+      let currentTranslateX = 0;
+
+      // Get dimensions dynamically to handle responsive sizing natively
+      function getItemDimensions() {
+        const item = items[0];
+        const width = item ? item.getBoundingClientRect().width : 160;
+        const computedStyle = window.getComputedStyle(track);
+        const gapVal = parseFloat(computedStyle.gap) || 25;
+        return { width, gap: gapVal };
+      }
+
+      function getTranslateXForIndex(index) {
+        const { width, gap } = getItemDimensions();
+        const viewportWidth = viewport.getBoundingClientRect().width;
+        // Center the active item: translate so the selected item is at viewport center
+        const firstItemOffset = (viewportWidth / 2) - (width / 2);
+        return firstItemOffset - (index * (width + gap));
+      }
+
+      function updateCarousel(useTransition = true) {
+        currentTranslateX = getTranslateXForIndex(activeIndex);
+        track.style.transition = useTransition ? 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)' : 'none';
+        track.style.transform = `translate3d(${currentTranslateX}px, -50%, 0)`;
+
+        items.forEach((item, index) => {
+          item.classList.remove('active', 'dimmed');
+          if (index === activeIndex) {
+            item.classList.add('active');
+            activeEn.textContent = item.dataset.en;
+            activeKo.textContent = item.dataset.ko;
+            activeDesc.textContent = item.dataset.desc;
+          } else {
+            item.classList.add('dimmed');
+          }
+        });
+      }
+
+      // Drag Gesture Support
+      let isDragging = false;
+      let startX = 0;
+      let startTranslateX = 0;
+
+      viewport.addEventListener('mousedown', dragStart);
+      viewport.addEventListener('touchstart', dragStart, { passive: true });
+      window.addEventListener('mouseup', dragEnd);
+      window.addEventListener('touchend', dragEnd);
+      window.addEventListener('mousemove', drag);
+      window.addEventListener('touchmove', drag, { passive: false });
+
+      function dragStart(e) {
+        isDragging = true;
+        startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+        startTranslateX = currentTranslateX;
+        track.style.transition = 'none';
+      }
+
+      function drag(e) {
+        if (!isDragging) return;
+        const currentX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+        const diffX = currentX - startX;
+        
+        currentTranslateX = startTranslateX + diffX;
+        track.style.transform = `translate3d(${currentTranslateX}px, -50%, 0)`;
+
+        // Highlight nearest item during drag
+        const { width, gap } = getItemDimensions();
+        const viewportWidth = viewport.getBoundingClientRect().width;
+        const firstItemOffset = (viewportWidth / 2) - (width / 2);
+        const calculatedIndex = Math.round((firstItemOffset - currentTranslateX) / (width + gap));
+        const tempActiveIndex = Math.min(Math.max(calculatedIndex, 0), items.length - 1);
+
+        items.forEach((item, index) => {
+          if (index === tempActiveIndex) {
+            item.classList.add('active');
+            item.classList.remove('dimmed');
+          } else {
+            item.classList.remove('active');
+            item.classList.add('dimmed');
+          }
+        });
+      }
+
+      function dragEnd(e) {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const { width, gap } = getItemDimensions();
+        const viewportWidth = viewport.getBoundingClientRect().width;
+        const firstItemOffset = (viewportWidth / 2) - (width / 2);
+        
+        const calculatedIndex = Math.round((firstItemOffset - currentTranslateX) / (width + gap));
+        activeIndex = Math.min(Math.max(calculatedIndex, 0), items.length - 1);
+
+        updateCarousel(true);
+      }
+
+      // Initial alignment on load and window resize
+      updateCarousel(false);
+      window.addEventListener('resize', () => {
+        updateCarousel(false);
       });
     });
   </script>

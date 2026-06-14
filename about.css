@@ -1,0 +1,292 @@
+/* ==========================================================================
+   da:bt About Page — about.css
+   ========================================================================== */
+
+.about-page-body {
+  background-color: #ffffff;
+  margin: 0;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+}
+
+/* -----------------------------------------------------------------------
+   ① 상단 히어로 헤더
+   ----------------------------------------------------------------------- */
+.about-hero {
+  border-bottom: 1px solid #000000;
+  padding: 80px 0 72px;
+}
+
+.about-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.about-brand-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #888888;
+  text-transform: uppercase;
+}
+
+.about-hero-tagline {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #000000;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.about-hero-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* -----------------------------------------------------------------------
+   ② 본문 — 좌(로고) / 우(텍스트) 2컬럼 레이아웃
+   ----------------------------------------------------------------------- */
+.about-body-section {
+  border-bottom: 1px solid #000000;
+}
+
+.about-body-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  min-height: 600px;
+}
+
+/* 좌측: 로고 컬럼 */
+.about-logo-col {
+  border-right: 1px solid #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+
+.about-logo-wrap {
+  width: 100%;
+  max-width: 220px;
+}
+
+.about-logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  /* Enforce pure black rendering for the logo */
+  filter: contrast(1);
+}
+
+/* 우측: 텍스트 컬럼 */
+.about-text-col {
+  padding: 80px 0 80px 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  box-sizing: border-box;
+}
+
+/* 브랜드 스토리 블록 */
+.about-story-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-story-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #888888;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.about-story-para {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.9;
+  color: #222222;
+  margin: 0;
+  word-break: keep-all;
+}
+
+/* 인포 영역 */
+.about-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid #000000;
+  padding-top: 40px;
+}
+
+.about-info-row {
+  display: flex;
+  gap: 40px;
+  padding: 18px 0;
+  border-bottom: 1px dashed #e5e5e5;
+  align-items: flex-start;
+}
+
+.about-info-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #888888;
+  text-transform: uppercase;
+  min-width: 90px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.about-info-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* -----------------------------------------------------------------------
+   ③ 하단 — Why We Exist
+   ----------------------------------------------------------------------- */
+.about-footer-section {
+  padding: 100px 0 120px;
+}
+
+.about-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+}
+
+.about-footer-label {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #aaaaaa;
+  text-transform: uppercase;
+}
+
+.about-footer-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2;
+  color: #333333;
+  margin: 0;
+  word-break: keep-all;
+}
+
+.about-footer-slogan {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(22px, 3.5vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000000;
+  line-height: 1.35;
+  margin-top: 16px;
+}
+
+/* -----------------------------------------------------------------------
+   Footer (Shared)
+   ----------------------------------------------------------------------- */
+.products-footer {
+  text-align: center;
+  padding: 24px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: #aaaaaa;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* -----------------------------------------------------------------------
+   Mobile Responsive
+   ----------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .about-hero-inner {
+    padding: 0 32px;
+  }
+
+  .about-body-inner {
+    grid-template-columns: 1fr;
+    padding: 0 32px;
+  }
+
+  .about-logo-col {
+    border-right: none;
+    border-bottom: 1px solid #000000;
+    padding: 60px 32px;
+  }
+
+  .about-logo-wrap {
+    max-width: 160px;
+  }
+
+  .about-text-col {
+    padding: 60px 0;
+  }
+
+  .about-footer-inner {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    padding: 60px 0 56px;
+  }
+
+  .about-hero-inner {
+    padding: 0 24px;
+  }
+
+  .about-hero-tagline {
+    font-size: 26px;
+  }
+
+  .about-body-inner {
+    padding: 0 24px;
+  }
+
+  .about-info-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .about-footer-section {
+    padding: 72px 0 80px;
+  }
+
+  .about-footer-inner {
+    padding: 0 24px;
+  }
+}

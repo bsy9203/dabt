@@ -17,11 +17,17 @@
 
   <header class="products-header">
     <nav class="products-nav">
-      <a href="index.html#hero" class="nav-item">HOME</a>
-      <a href="index.html#story" class="nav-item">STORY</a>
-      <a href="products.html" class="nav-item active">PRODUCTS</a>
-      <a href="#" class="nav-item">CONTENTS</a>
-      <a href="#" class="nav-item">ABOUT</a>
+      <a href="index.html" class="nav-logo">
+        <img src="assets/dabt_logo_b.png" alt="da:bt" class="nav-logo-img">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#hero" class="nav-item">HOME</a>
+        <a href="index.html#split-story-section" class="nav-item">STORY</a>
+        <a href="index.html#ingredients-grid-section" class="nav-item">INGREDIENTS</a>
+        <a href="products.html" class="nav-item active">PRODUCTS</a>
+        <a href="cart.html" class="nav-item">CART</a>
+        <a href="about.html" class="nav-item">ABOUT</a>
+      </div>
     </nav>
   </header>
 
@@ -42,7 +48,12 @@
         <div class="sales-matrix">
           
           <!-- Row 1 -->
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product" 
+               data-id="juice-01"
+               data-name="JUICE ITEM 01"
+               data-price="12000"
+               data-img="assets/juice/DSCF6082.JPG"
+               data-desc="유기농 사과와 당근을 그대로 착즙하여 영양소 소실을 최소화한 신선한 건강 주스입니다. 일상 속 피로 회복과 비타민 보충에 탁월합니다.">
             <div class="prod-wrap">
               <img src="assets/juice/DSCF6082.JPG" alt="Juice Item 01" class="prod-img">
               <div class="prod-info">
@@ -57,7 +68,12 @@
             </div>
           </div>
           
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="juice-02"
+               data-name="JUICE ITEM 02"
+               data-price="14000"
+               data-img="assets/juice/DSCF6091.JPG"
+               data-desc="항산화 성분이 풍부한 석류와 비트를 결합하여 맑고 건강한 에너지를 전하는 프리미엄 주스입니다. 혈행 개선과 피부 톤 보정에 도움을 줍니다.">
             <div class="prod-wrap">
               <img src="assets/juice/DSCF6091.JPG" alt="Juice Item 02" class="prod-img">
               <div class="prod-info">
@@ -72,7 +88,12 @@
           <!-- Row 2 -->
           <div class="matrix-cell"></div>
           
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="juice-03"
+               data-name="JUICE ITEM 03"
+               data-price="11000"
+               data-img="assets/juice/DSCF6109.JPG"
+               data-desc="비타민 C가 가득한 신선한 시트러스 믹스 주스로, 환절기 면역력을 보강하고 맑은 피부 생기를 되찾아 줍니다. 상큼함이 입안 가득 돕니다.">
             <div class="prod-wrap">
               <img src="assets/juice/DSCF6109.JPG" alt="Juice Item 03" class="prod-img">
               <div class="prod-info">
@@ -90,7 +111,12 @@
           <div class="matrix-cell"></div>
           
           <!-- Row 3 -->
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="juice-04"
+               data-name="JUICE ITEM 04"
+               data-price="13000"
+               data-img="assets/juice/DSCF6110.JPG"
+               data-desc="풍부한 식이섬유를 가진 유기농 케일과 사과를 믹싱하여 장 건강 증진과 노폐물 배출에 탁월한 그린 에너지 주스입니다.">
             <div class="prod-wrap">
               <img src="assets/juice/DSCF6110.JPG" alt="Juice Item 04" class="prod-img">
               <div class="prod-info">
@@ -110,7 +136,12 @@
           <div class="matrix-cell"></div>
           
           <!-- Row 4 -->
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="juice-05"
+               data-name="JUICE ITEM 05"
+               data-price="15000"
+               data-img="assets/juice/DSCF6139.JPG"
+               data-desc="베타카로틴이 농축된 유기농 단호박과 바나나 베이스로 장내 부담을 덜고 속을 편안하게 채워주는 이뇨 보조 및 건강 가득 주스입니다.">
             <div class="prod-wrap">
               <img src="assets/juice/DSCF6139.JPG" alt="Juice Item 05" class="prod-img">
               <div class="prod-info">
@@ -128,7 +159,12 @@
             </div>
           </div>
           
-          <div class="matrix-cell">
+          <div class="matrix-cell clickable-product"
+               data-id="juice-06"
+               data-name="JUICE ITEM 06"
+               data-price="12500"
+               data-img="assets/juice/DSCF6173.JPG"
+               data-desc="천연 비타민과 필수 미네랄이 응축된 유기농 베리 블렌드로, 눈 건강과 항산화 피로 회복을 동시에 관리하는 데 탁월합니다.">
             <div class="prod-wrap">
               <img src="assets/juice/DSCF6173.JPG" alt="Juice Item 06" class="prod-img">
               <div class="prod-info">
@@ -147,6 +183,8 @@
   <footer class="products-footer">
     © 2026 dabt. all rights reserved.
   </footer>
+
+  <script src="cart.js" defer></script>
 
 </body>
 </html>
