@@ -86,7 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (currentProduct) {
         addToCart(currentProduct);
         closePdpDrawer();
-        setTimeout(openCartDrawer, 400); // Smooth transition: wait for PDP to slide out
+        showCustomModal('장바구니에 상품이 담겼습니다.', true, () => {
+          setTimeout(openCartDrawer, 400); // Smooth transition: wait for PDP to slide out
+        });
       }
     });
 
